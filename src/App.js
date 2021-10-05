@@ -1,6 +1,11 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+/**
+ * CRUD example App with React.
+ * @return {Object} The main component.
+ */
 function App() {
   return (
     <div className="App">
