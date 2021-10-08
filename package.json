@@ -1,5 +1,11 @@
 {
   "name": "crud-react-app",
+  "license": "mit",
+  "description": "Example of React App as a simple CRUD",
+  "keywords": [
+    "react",
+    "example"
+  ],
   "version": "0.1.0",
   "private": true,
   "dependencies": {
