@@ -2,6 +2,7 @@
   "name": "crud-react-app",
   "license": "mit",
   "description": "Example of React App as a simple CRUD",
+  "homepage": "https://aledambrosio.github.io/crud-react-app/",
   "keywords": [
     "react",
     "example"
