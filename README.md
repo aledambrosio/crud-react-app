@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Example React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![CI status](https://github.com/aledambrosio/crud-react-app/actions/workflows/build.yml/badge.svg)
 
 ## Available Scripts
 
