@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { CssBaseline } from '@mui/material'
 
 /**
  * Render index
  */
 ReactDOM.render(
   <StrictMode>
+    <CssBaseline />
     <App />
   </StrictMode>,
   document.getElementById('root'),

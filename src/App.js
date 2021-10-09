@@ -1,5 +1,16 @@
-import logo from './logo.svg'
 import './App.css'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from 'react-router-dom'
+import AddIcon from '@mui/icons-material/Add'
+import HomeIcon from '@mui/icons-material/Home'
+import List from './components/List'
+import New from './components/New'
+import { AppBar, Toolbar, Button, ButtonGroup } from '@mui/material'
+import { Box } from '@mui/system'
 
 /**
  * CRUD example App with React.
@@ -7,22 +18,49 @@ import './App.css'
  */
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="navbar">
+          <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+              <Toolbar>
+                <ButtonGroup
+                  variant="contained"
+                  aria-label="outlined primary button group"
+                >
+                  <Button
+                    variant="contained"
+                    component={NavLink}
+                    to="/"
+                    activeClassName="button-active"
+                  >
+                    <HomeIcon /> Inicio
+                  </Button>
+                  <Button
+                    variant="contained"
+                    component={NavLink}
+                    to="/new"
+                    activeClassName="button-active"
+                  >
+                    <AddIcon /> Nueva
+                  </Button>
+                </ButtonGroup>
+              </Toolbar>
+            </AppBar>
+          </Box>
+        </header>
+        <container>
+          <Switch>
+            <Route path="/new">
+              <New />
+            </Route>
+            <Route exact path="/">
+              <List />
+            </Route>
+          </Switch>
+        </container>
+      </div>
+    </Router>
   )
 }
 
