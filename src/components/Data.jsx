@@ -21,12 +21,9 @@ export default function Data({ dataRows, dataColumns }) {
   // eslint-disable-next-line no-unused-vars
   const [columns, setColumns] = useState(dataColumns)
 
+  // Table page state
   const [page, setPage] = useState(0)
   const [rowsPerPage, setRowsPerPage] = useState(10)
-
-  console.log('Data')
-  console.log(columns)
-  console.log(rows)
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage)
@@ -75,7 +72,7 @@ export default function Data({ dataRows, dataColumns }) {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[10, 25, 50]}
         component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}

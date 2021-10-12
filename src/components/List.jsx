@@ -5,10 +5,10 @@ import DateRangePicker from '@mui/lab/DateRangePicker'
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
 import LocalizationProvider from '@mui/lab/LocalizationProvider'
 import Box from '@mui/material/Box'
-import { Button } from '@mui/material'
-import Data from './Data'
-import mockColumns from '../assets/columns1'
-import mockData from '../assets/mockData'
+import { Button, Divider } from '@mui/material'
+import DataTable from './DataTable'
+import { columnsGrid as mockColumns } from '../assets/columns1'
+import { rowsGrid as mockData } from '../assets/mockData'
 
 /**
  *
@@ -28,7 +28,9 @@ export default function List() {
     // Do magic to get data filter by date range, result goes in setDataList
 
     setShowResults(true)
+
     // Stop loading animation
+    return true
   }
 
   return (
@@ -49,13 +51,19 @@ export default function List() {
                 <TextField {...startProps} />
                 <Box sx={{ mx: 2 }}> a </Box>
                 <TextField {...endProps} />
+                <div className="searchButtonDiv">
+                  <Button variant="contained" onClick={search}>
+                    Buscar
+                  </Button>
+                </div>
               </Fragment>
             )}
           />
         </LocalizationProvider>
-        <Button onClick={search}>Buscar</Button>
+
+        <Divider />
         {showResults ? (
-          <Data dataRows={dataList} dataColumns={columns} />
+          <DataTable dataRows={dataList} dataColumns={columns} />
         ) : null}
       </div>
     </div>

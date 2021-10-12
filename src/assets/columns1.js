@@ -25,3 +25,30 @@ const columns = [
 ]
 
 export default columns
+
+export const columnsGrid = [
+  { field: 'name', headerName: 'Name', width: 170, sortable: true },
+  { field: 'code', headerName: 'ISO\u00a0Code', width: 100, sortable: true },
+  {
+    field: 'population',
+    headerName: 'Population',
+    width: 170,
+    align: 'right',
+    sortable: true,
+    format: (value) => value.toLocaleString('en-US'),
+  },
+  {
+    field: 'size',
+    headerName: 'Size\u00a0(km\u00b2)',
+    width: 170,
+    align: 'right',
+    format: (value) => value.toLocaleString('en-US'),
+  },
+  {
+    field: 'density',
+    headerName: 'Density',
+    width: 170,
+    align: 'right',
+    format: (value) => value.toFixed(2),
+  },
+]
