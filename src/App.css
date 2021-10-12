@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+img.App-header-Logo {
+  height: 12vh;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -11,4 +15,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.filters {
+  padding: 5vh 0;
 }

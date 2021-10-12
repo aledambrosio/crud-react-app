@@ -4,15 +4,18 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { CssBaseline } from '@mui/material'
+import { StyledEngineProvider } from '@mui/material/styles'
 
 /**
  * Render index
  */
 ReactDOM.render(
-  <StrictMode>
-    <CssBaseline />
-    <App />
-  </StrictMode>,
+  <StyledEngineProvider injectFirst>
+    <StrictMode>
+      <CssBaseline />
+      <App />
+    </StrictMode>
+  </StyledEngineProvider>,
   document.getElementById('root'),
 )
 
